@@ -7,9 +7,6 @@ pc = 0.6;%Crossover probability
 pm = 0.8;%Mutation probability
 pop = initpop(popsize,chromlength);
 for i = 1:1000     
-    if i==768
-        pop(36,:)=[8 6 10 7 11 9 5 0];
-    end
     objvalue = cal_objvalue(pop);    
     [~,a]=max(objvalue);            % Save the maximum objvalue
     pop_max=pop(a,:);
